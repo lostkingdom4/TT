@@ -1,0 +1,9 @@
+{
+  "description": "V100 kernels shipping with @triton.autotune — rerun with first autotune config as 'original' baseline (BASELINE_USE_AUTOTUNE_FIRST=1). triton_mm is omitted because the current Inductor backend lowers addmm to triton_tem_fused_addmm_0 only, so no per-shape capture exists for triton_mm.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "_addmm_fwd", "source": "handwritten"},
+    {"operator": "addmm", "kernel": "triton_tem_fused_addmm_0", "source": "inductor"},
+    {"operator": "jagged_softmax", "kernel": "triton_red_fused__jagged_to_padded_dense_forward__softmax_0", "source": "inductor"}
+  ]
+}

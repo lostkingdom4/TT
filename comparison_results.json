@@ -1,0 +1,67 @@
+{
+  "kernel": "softmax_kernel",
+  "kernel_class": "Operator",
+  "device": "cuda",
+  "timestamp": "2026-02-03T23:01:36.385386+00:00",
+  "tensor_shape": [
+    4096,
+    256
+  ],
+  "tensor_dtype": "torch.float16",
+  "grid": [
+    4096
+  ],
+  "original_config": {
+    "num_warps": 4,
+    "num_stages": 3,
+    "block_size": {
+      "BLOCK_SIZE": 256
+    },
+    "grid": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "recommended_config": {
+    "num_warps": 8,
+    "num_stages": 3,
+    "block_size": {
+      "BLOCK_SIZE": 256
+    },
+    "grid": {
+      "x": 240,
+      "y": 1,
+      "z": 1
+    },
+    "eviction_policy": "evict_last",
+    "shared_memory_optimization": "Add 4KB shared memory for warp reduction results to enable efficient cross-warp reduction operations"
+  },
+  "block_size_mapping": {
+    "BLOCK_SIZE": 256
+  },
+  "original_stats": {
+    "median": 0.013311999849975109,
+    "mean": 0.013291519973427058,
+    "min": 0.01228800043463707,
+    "max": 0.01945599913597107,
+    "std_dev": 0.001023790816037735,
+    "samples": 50
+  },
+  "recommended_stats": {
+    "median": 0.018432000651955605,
+    "mean": 0.01813566612852348,
+    "min": 0.01740800030529499,
+    "max": 0.01945599913597107,
+    "std_dev": 0.0004864391754282165,
+    "samples": 311
+  },
+  "speedup": 0.7222221885372344,
+  "improvement_pct": -38.46154491948908,
+  "settings": {
+    "warmup": 25,
+    "rep": 100,
+    "seed": 42,
+    "shapes_file": "/root/tritonbench/agent/PyTorch_Intel_GPU_MLIR-Extraction/extract/ir_output/softmax/softmax_softmax_kernel_shapes.json"
+  }
+}

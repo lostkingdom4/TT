@@ -1,0 +1,30 @@
+{
+  "description": "Union of v100_improved_only.json (19 kernels from all_shapes_v2 run) and v100_improved_low_latency.json (12 low-latency kernels for re-run after widened search space). Deduped on operator+kernel. Pruned (2026-04-26) to drop 7 kernels that showed no per-shape improvement in the iter3+agent_proposals all-shapes run: vector_add.triton_add_kernel (1.01x best, 2/16), fused_linear_jsd.triton_red_fused__to_copy_add_div_mul_sum_1 (1.00x, 0/3), kl_div.triton_red_fused_div_mul_sub_sum_xlogy_1 (1.00x, 0/2), layer_norm._layer_norm_fwd_fused (1.00x, 0/30), layer_norm.triton_per_fused_native_layer_norm_0 (1.00x, 0/1), low_mem_dropout._triton_dropout (1.00x, 0/8), sum.triton_per_fused_sum_1 (1.00x, 0/4). Renamed (2026-04-26) to track Inductor fusion-suffix renumbering after a clean V100 re-extract: rope.triton_poi_fused__to_copy_cos_mul_sin_1 -> _2 (same pointwise kernel, suffix bumped); mamba2_chunk_scan.triton_poi_fused_add_mul_4 split into _5 and _6 (Inductor now emits two pointwise add+mul kernels covering 4D and 3D layouts where there used to be one); geglu.triton_poi_fused_gelu_mul_0 retained — geglu is now in extract/run_inductor.py:_SKIP_MAX_AUTOTUNE so the standalone pointwise epilogue is still emitted alongside the matmul template.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "_addmm_fwd", "source": "handwritten"},
+    {"operator": "addmm", "kernel": "triton_mm", "source": "handwritten"},
+    {"operator": "addmm", "kernel": "triton_tem_fused_addmm_0"},
+    {"operator": "embedding", "kernel": "triton_poi_fused_embedding_0"},
+    {"operator": "geglu", "kernel": "triton_poi_fused_gelu_mul_0"},
+    {"operator": "int4_gemm", "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_view_2"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_mul_pow_sub_sum_0"},
+    {"operator": "jagged_softmax", "kernel": "triton_red_fused__jagged_to_padded_dense_forward__softmax_0"},
+    {"operator": "layer_norm", "kernel": "_layer_norm_fwd_fused_no_bias", "source": "handwritten"},
+    {"operator": "low_mem_dropout", "kernel": "_seeded_triton_dropout", "source": "handwritten"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_add_mul_5"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_add_mul_6"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_bmm_1"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_2"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_3"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_mul_0"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_0"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_1"},
+    {"operator": "rms_norm", "kernel": "triton_per_fused__to_copy_add_mean_mul_pow_rsqrt_0", "source": "inductor"},
+    {"operator": "rope", "kernel": "triton_poi_fused__to_copy_cos_mul_sin_2", "source": "inductor"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_0"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_1"},
+    {"operator": "sum", "kernel": "triton_sum_kernel_scalar_result", "source": "handwritten"}
+  ]
+}

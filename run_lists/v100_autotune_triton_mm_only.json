@@ -1,0 +1,7 @@
+{
+  "description": "V100 triton_mm run (per-shape .py captured via extract/capture_triton_mm_only.py). Uses BASELINE_USE_AUTOTUNE_FIRST=1 but compare_configs will still fall back to source-patching for this Inductor-template kernel — override won't take effect for baseline, same caveat as triton_tem_fused_addmm_0.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "triton_mm", "source": "inductor"}
+  ]
+}

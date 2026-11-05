@@ -1,0 +1,12 @@
+{
+  "description": "A100 table fill-in: kernels in tab:v100_vs_l40s that are still blank on A100 (excludes jagged_softmax — inductor IR missing locally)",
+  "mode": "include",
+  "kernels": [
+    {"operator": "int4_gemm", "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0", "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_add_mul_4", "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_bmm_1", "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_mul_0", "source": "inductor"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_0", "source": "inductor"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_0", "source": "inductor"}
+  ]
+}

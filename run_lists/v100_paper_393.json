@@ -1,0 +1,26 @@
+{
+  "description": "Paper Table 2 (tab:main_results) scope: 19 paper rows mapping to 20 kernel entries covering exactly 393 shapes on V100. Maps mamba2_scan (add) -> triton_poi_fused_add_mul_5 + _6 (Inductor renumbering after clean re-extract). Excludes 4 kernels from v100_improved_combined.json that are not in Table 2: low_mem_dropout, rms_norm, rope (sin/cos _2), sum.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "_addmm_fwd", "source": "handwritten"},
+    {"operator": "addmm", "kernel": "triton_mm", "source": "handwritten"},
+    {"operator": "addmm", "kernel": "triton_tem_fused_addmm_0"},
+    {"operator": "embedding", "kernel": "triton_poi_fused_embedding_0"},
+    {"operator": "geglu", "kernel": "triton_poi_fused_gelu_mul_0"},
+    {"operator": "int4_gemm", "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_view_2"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_mul_pow_sub_sum_0"},
+    {"operator": "jagged_softmax", "kernel": "triton_red_fused__jagged_to_padded_dense_forward__softmax_0"},
+    {"operator": "layer_norm", "kernel": "_layer_norm_fwd_fused_no_bias", "source": "handwritten"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_add_mul_5"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_add_mul_6"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_bmm_1"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_2"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_3"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_mul_0"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_0"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_1"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_0"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_1"}
+  ]
+}

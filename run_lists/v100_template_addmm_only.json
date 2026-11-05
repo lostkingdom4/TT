@@ -1,0 +1,11 @@
+{
+  "description": "Smoke-test for the fixed per-shape template source snapshot path - restricts batch_runner to the single @triton_heuristics.template kernel under addmm (triton_tem_fused_addmm_0). Handwritten _addmm_fwd and the non-template triton_mm are intentionally excluded.",
+  "mode": "include",
+  "kernels": [
+    {
+      "operator": "addmm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    }
+  ]
+}

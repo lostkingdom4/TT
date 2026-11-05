@@ -1,0 +1,7 @@
+{
+  "description": "Re-run only triton_tem_fused_addmm_0 at low parallelism (the 32-wide batch OOM'd).",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "triton_tem_fused_addmm_0", "source": "inductor"}
+  ]
+}

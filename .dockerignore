@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Data directories (exclude large datasets from build context)
+Data/triton_cache/
+Data/performance/
+Data/tuning_results/
+Data/data_64/
+Data/runs/
+Data/test_data/
+Data/visualizations/
+runs/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Documentation (optional - uncomment if you want to exclude)
+# *.md
+# docs/
+
+# Test files (if not needed in container)
+.pytest_cache/
+.hypothesis/

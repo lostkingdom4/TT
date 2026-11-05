@@ -1,0 +1,1077 @@
+{
+  "description": "KernelBench L2 kernels on v100 — L2 subset of v100_kernelbench_include.json",
+  "mode": "include",
+  "threshold_ms": 0.02,
+  "kernels": [
+    {
+      "operator": "kb_L2_100_ConvTranspose3d_Clamp_Min_Divide",
+      "kernel": "triton_poi_fused_clamp_convolution_div_ge_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_10_ConvTranspose2d_MaxPool_Hardtanh_Mean_Tanh",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_10_ConvTranspose2d_MaxPool_Hardtanh_Mean_Tanh",
+      "kernel": "triton_red_fused_hardtanh_hardtanh_backward_max_pool2d_with_indices_mean_tanh_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_11_ConvTranspose2d_BatchNorm_Tanh_MaxPool_GroupNorm",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_convolution_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_11_ConvTranspose2d_BatchNorm_Tanh_MaxPool_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_11_ConvTranspose2d_BatchNorm_Tanh_MaxPool_GroupNorm",
+      "kernel": "triton_red_fused_max_pool2d_with_indices_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_12_Gemm_Multiply_LeakyReLU",
+      "kernel": "triton_tem_fused_addmm_leaky_relu_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_13_ConvTranspose3d_Mean_Add_Softmax_Tanh_Scaling",
+      "kernel": "triton_per_fused__softmax_add_convolution_mean_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_13_ConvTranspose3d_Mean_Add_Softmax_Tanh_Scaling",
+      "kernel": "triton_per_fused_convolution_mean_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_13_ConvTranspose3d_Mean_Add_Softmax_Tanh_Scaling",
+      "kernel": "triton_poi_fused__softmax_add_convolution_mean_mul_tanh_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_14_Gemm_Divide_Sum_Scaling",
+      "kernel": "triton_red_fused_div_mul_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_14_Gemm_Divide_Sum_Scaling",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_15_ConvTranspose3d_BatchNorm_Subtract",
+      "kernel": "triton_red_fused__native_batch_norm_legit_no_training_convolution_mean_sub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_16_ConvTranspose2d_Mish_Add_Hardtanh_Scaling",
+      "kernel": "triton_poi_fused_add_convolution_hardtanh_mish_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_17_Conv2d_InstanceNorm_Divide",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_17_Conv2d_InstanceNorm_Divide",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_17_Conv2d_InstanceNorm_Divide",
+      "kernel": "triton_poi_fused_convolution_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_17_Conv2d_InstanceNorm_Divide",
+      "kernel": "triton_red_fused__native_batch_norm_legit_div_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_18_Matmul_Sum_Max_AvgPool_LogSumExp_LogSumExp",
+      "kernel": "triton_red_fused_logsumexp_max_mean_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_18_Matmul_Sum_Max_AvgPool_LogSumExp_LogSumExp",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_19_ConvTranspose2d_GELU_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_19_ConvTranspose2d_GELU_GroupNorm",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_1_Conv2D_ReLU_BiasAdd",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_1_Conv2D_ReLU_BiasAdd",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_1_Conv2D_ReLU_BiasAdd",
+      "kernel": "triton_poi_fused_add_convolution_relu_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_1_Conv2D_ReLU_BiasAdd",
+      "kernel": "triton_poi_fused_convolution_relu_threshold_backward_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_20_ConvTranspose3d_Sum_ResidualAdd_Multiply_ResidualAdd",
+      "kernel": "triton_poi_fused_add_convolution_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_21_Conv2d_Add_Scale_Sigmoid_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_21_Conv2d_Add_Scale_Sigmoid_GroupNorm",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_22_Matmul_Scale_ResidualAdd_Clamp_LogSumExp_Mish",
+      "kernel": "triton_red_fused_add_clamp_logsumexp_mish_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_22_Matmul_Scale_ResidualAdd_Clamp_LogSumExp_Mish",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_23_Conv3d_GroupNorm_Mean",
+      "kernel": "triton_per_fused_mean_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_23_Conv3d_GroupNorm_Mean",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_23_Conv3d_GroupNorm_Mean",
+      "kernel": "triton_red_fused_mean_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_24_Conv3d_Min_Softmax",
+      "kernel": "triton_per_fused__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_24_Conv3d_Min_Softmax",
+      "kernel": "triton_per_fused_convolution_min_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_24_Conv3d_Min_Softmax",
+      "kernel": "triton_poi_fused__softmax_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_25_Conv2d_Min_Tanh_Tanh",
+      "kernel": "triton_per_fused_convolution_min_tanh_tanh_backward_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_26_ConvTranspose3d_Add_HardSwish",
+      "kernel": "triton_poi_fused_add_convolution_hardswish_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_27_Conv3d_HardSwish_GroupNorm_Mean",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_27_Conv3d_HardSwish_GroupNorm_Mean",
+      "kernel": "triton_red_fused_mean_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_28_BMM_InstanceNorm_Sum_ResidualAdd_Multiply",
+      "kernel": "triton_poi_fused_add_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_28_BMM_InstanceNorm_Sum_ResidualAdd_Multiply",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_29_Matmul_Mish_Mish",
+      "kernel": "triton_poi_fused_mish_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_29_Matmul_Mish_Mish",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_2_ConvTranspose2d_BiasAdd_Clamp_Scaling_Clamp_Divide",
+      "kernel": "triton_poi_fused_add_clamp_convolution_div_ge_le_logical_and_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_30_Gemm_GroupNorm_Hardtanh",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_30_Gemm_GroupNorm_Hardtanh",
+      "kernel": "triton_poi_fused_hardtanh_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_30_Gemm_GroupNorm_Hardtanh",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_31_Conv2d_Min_Add_Multiply",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_31_Conv2d_Min_Add_Multiply",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_31_Conv2d_Min_Add_Multiply",
+      "kernel": "triton_poi_fused_add_convolution_lift_fresh_minimum_mul_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_31_Conv2d_Min_Add_Multiply",
+      "kernel": "triton_poi_fused_convolution_eq_gt_lift_fresh_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_32_Conv2d_Scaling_Min",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_32_Conv2d_Scaling_Min",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_32_Conv2d_Scaling_Min",
+      "kernel": "triton_red_fused_convolution_min_mul_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_33_Gemm_Scale_BatchNorm",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_33_Gemm_Scale_BatchNorm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_34_ConvTranspose3d_LayerNorm_GELU_Scaling",
+      "kernel": "triton_per_fused_convolution_gelu_mul_native_layer_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_35_Conv2d_Subtract_HardSwish_MaxPool_Mish",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_35_Conv2d_Subtract_HardSwish_MaxPool_Mish",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_35_Conv2d_Subtract_HardSwish_MaxPool_Mish",
+      "kernel": "triton_poi_fused_add_fill_max_pool2d_with_indices_mish_mul_sigmoid_sub_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_35_Conv2d_Subtract_HardSwish_MaxPool_Mish",
+      "kernel": "triton_poi_fused_convolution_hardswish_sub_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_36_ConvTranspose2d_Min_Sum_GELU_Add",
+      "kernel": "triton_per_fused_add_gelu_gelu_backward_sum_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_36_ConvTranspose2d_Min_Sum_GELU_Add",
+      "kernel": "triton_red_fused_convolution_min_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_36_ConvTranspose2d_Min_Sum_GELU_Add",
+      "kernel": "triton_red_fused_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_37_Matmul_Swish_Sum_GroupNorm",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_37_Matmul_Swish_Sum_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_37_Matmul_Swish_Sum_GroupNorm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_38_ConvTranspose3d_AvgPool_Clamp_Softmax_Multiply",
+      "kernel": "triton_poi_fused_avg_pool3d_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_38_ConvTranspose3d_AvgPool_Clamp_Softmax_Multiply",
+      "kernel": "triton_red_fused__softmax_convolution_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_39_Gemm_Scale_BatchNorm",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_39_Gemm_Scale_BatchNorm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_3_ConvTranspose3d_Sum_LayerNorm_AvgPool_GELU",
+      "kernel": "triton_per_fused_add_convolution_native_layer_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_3_ConvTranspose3d_Sum_LayerNorm_AvgPool_GELU",
+      "kernel": "triton_poi_fused_avg_pool3d_gelu_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_40_Matmul_Scaling_ResidualAdd",
+      "kernel": "triton_tem_fused_add_addmm_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_41_Gemm_BatchNorm_GELU_ReLU",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_gelu_relu_threshold_backward_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_41_Gemm_BatchNorm_GELU_ReLU",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_42_ConvTranspose2d_GlobalAvgPool_BiasAdd_LogSumExp_Sum_Multiply",
+      "kernel": "triton_per_fused_add_convolution_exp_logsumexp_mean_mul_sub_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_42_ConvTranspose2d_GlobalAvgPool_BiasAdd_LogSumExp_Sum_Multiply",
+      "kernel": "triton_red_fused_convolution_mean_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_43_Conv3d_Max_LogSumExp_ReLU",
+      "kernel": "triton_per_fused_logsumexp_relu_threshold_backward_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_43_Conv3d_Max_LogSumExp_ReLU",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_43_Conv3d_Max_LogSumExp_ReLU",
+      "kernel": "triton_poi_fused_exp_logsumexp_sub_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_44_ConvTranspose2d_Multiply_GlobalAvgPool_GlobalAvgPool_Mean",
+      "kernel": "triton_red_fused_convolution_mean_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_45_Gemm_Sigmoid_LogSumExp",
+      "kernel": "triton_per_fused_logsumexp_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_45_Gemm_Sigmoid_LogSumExp",
+      "kernel": "triton_tem_fused_addmm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_45_Gemm_Sigmoid_LogSumExp",
+      "kernel": "triton_tem_fused_addmm_sigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_46_Conv2d_Subtract_Tanh_Subtract_AvgPool",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_46_Conv2d_Subtract_Tanh_Subtract_AvgPool",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_46_Conv2d_Subtract_Tanh_Subtract_AvgPool",
+      "kernel": "triton_poi_fused_avg_pool2d_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_46_Conv2d_Subtract_Tanh_Subtract_AvgPool",
+      "kernel": "triton_poi_fused_convolution_sub_tanh_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_47_Conv3d_Mish_Tanh",
+      "kernel": "triton_poi_fused_convolution_mish_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_48_Conv3d_Scaling_Tanh_Multiply_Sigmoid",
+      "kernel": "triton_poi_fused_convolution_mul_sigmoid_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_49_ConvTranspose3d_Softmax_Sigmoid",
+      "kernel": "triton_per_fused__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_49_ConvTranspose3d_Softmax_Sigmoid",
+      "kernel": "triton_poi_fused__softmax_sigmoid_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_49_ConvTranspose3d_Softmax_Sigmoid",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_4_Conv2d_Mish_Mish",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_4_Conv2d_Mish_Mish",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_4_Conv2d_Mish_Mish",
+      "kernel": "triton_poi_fused_convolution_mish_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_50_ConvTranspose3d_Scaling_AvgPool_BiasAdd_Scaling",
+      "kernel": "triton_poi_fused_add_avg_pool3d_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_50_ConvTranspose3d_Scaling_AvgPool_BiasAdd_Scaling",
+      "kernel": "triton_poi_fused_convolution_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_51_Gemm_Subtract_GlobalAvgPool_LogSumExp_GELU_ResidualAdd",
+      "kernel": "triton_red_fused_add_addmm_gelu_logsumexp_mean_sub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_51_Gemm_Subtract_GlobalAvgPool_LogSumExp_GELU_ResidualAdd",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_52_Conv2d_Activation_BatchNorm",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_52_Conv2d_Activation_BatchNorm",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_52_Conv2d_Activation_BatchNorm",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_convolution_mul_softplus_tanh_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_53_Gemm_Scaling_Hardtanh_GELU",
+      "kernel": "triton_tem_fused_addmm_gelu_hardtanh_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_54_Conv2d_Multiply_LeakyReLU_GELU",
+      "kernel": "triton_poi_fused_convolution_gelu_leaky_relu_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_55_Matmul_MaxPool_Sum_Scale",
+      "kernel": "triton_per_fused_mul_sum_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_55_Matmul_MaxPool_Sum_Scale",
+      "kernel": "triton_red_fused_max_pool2d_with_indices_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_55_Matmul_MaxPool_Sum_Scale",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_56_Matmul_Sigmoid_Sum",
+      "kernel": "triton_per_fused_sigmoid_sum_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_56_Matmul_Sigmoid_Sum",
+      "kernel": "triton_red_fused_sigmoid_sum_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_56_Matmul_Sigmoid_Sum",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_57_Conv2d_ReLU_HardSwish",
+      "kernel": "triton_tem_fused_add_clamp_convolution_div_mul_relu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_58_ConvTranspose3d_LogSumExp_HardSwish_Subtract_Clamp",
+      "kernel": "triton_per_fused_add_clamp_div_logsumexp_mul_sigmoid_sub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_58_ConvTranspose3d_LogSumExp_HardSwish_Subtract_Clamp",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_59_Matmul_Swish_Scaling",
+      "kernel": "triton_tem_fused_addmm_mul_sigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_5_ConvTranspose2d_Subtract_Tanh",
+      "kernel": "triton_poi_fused_convolution_sub_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_60_ConvTranspose3d_Swish_GroupNorm_HardSwish",
+      "kernel": "triton_poi_fused_hardswish_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_60_ConvTranspose3d_Swish_GroupNorm_HardSwish",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_61_ConvTranspose3d_ReLU_GroupNorm",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_61_ConvTranspose3d_ReLU_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_61_ConvTranspose3d_ReLU_GroupNorm",
+      "kernel": "triton_red_fused_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_62_Matmul_GroupNorm_LeakyReLU_Sum",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_62_Matmul_GroupNorm_LeakyReLU_Sum",
+      "kernel": "triton_poi_fused_add_leaky_relu_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_62_Matmul_GroupNorm_LeakyReLU_Sum",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_63_Gemm_ReLU_Divide",
+      "kernel": "triton_tem_fused_addmm_div_relu_threshold_backward_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_64_Gemm_LogSumExp_LeakyReLU_LeakyReLU_GELU_GELU",
+      "kernel": "triton_red_fused_gelu_leaky_relu_logsumexp_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_64_Gemm_LogSumExp_LeakyReLU_LeakyReLU_GELU_GELU",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_65_Conv2d_AvgPool_Sigmoid_Sum",
+      "kernel": "triton_per_fused_sigmoid_sum_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_65_Conv2d_AvgPool_Sigmoid_Sum",
+      "kernel": "triton_poi_fused_avg_pool2d_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_65_Conv2d_AvgPool_Sigmoid_Sum",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_65_Conv2d_AvgPool_Sigmoid_Sum",
+      "kernel": "triton_red_fused_sigmoid_sum_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_per_fused__softmax_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_per_fused__softmax_4",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_poi_fused__softmax_5",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_red_fused__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_red_fused__softmax_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_66_Matmul_Dropout_Softmax",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_67_Conv2d_GELU_GlobalAvgPool",
+      "kernel": "triton_red_fused_convolution_gelu_mean_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_68_Matmul_Min_Subtract",
+      "kernel": "triton_tem_fused_addmm_minimum_sub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_69_Conv2d_HardSwish_ReLU",
+      "kernel": "triton_poi_fused_convolution_hardswish_relu_threshold_backward_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_69_Conv2d_HardSwish_ReLU",
+      "kernel": "triton_tem_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_6_Conv3d_Softmax_MaxPool_MaxPool",
+      "kernel": "triton_per_fused__softmax_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_6_Conv3d_Softmax_MaxPool_MaxPool",
+      "kernel": "triton_poi_fused__softmax_convolution_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_70_Gemm_Sigmoid_Scaling_ResidualAdd",
+      "kernel": "triton_poi_fused_add_mul_sigmoid_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_70_Gemm_Sigmoid_Scaling_ResidualAdd",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_71_Conv2d_Divide_LeakyReLU",
+      "kernel": "triton_tem_fused_convolution_div_leaky_relu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_72_ConvTranspose3d_BatchNorm_AvgPool_AvgPool",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_72_ConvTranspose3d_BatchNorm_AvgPool_AvgPool",
+      "kernel": "triton_poi_fused_avg_pool3d_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_72_ConvTranspose3d_BatchNorm_AvgPool_AvgPool",
+      "kernel": "triton_poi_fused_avg_pool3d_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_73_Conv2d_BatchNorm_Scaling",
+      "kernel": "triton_tem_fused__native_batch_norm_legit_no_training_convolution_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_74_ConvTranspose3d_LeakyReLU_Multiply_LeakyReLU_Max",
+      "kernel": "triton_poi_fused_convolution_leaky_relu_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_75_Gemm_GroupNorm_Min_BiasAdd",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_75_Gemm_GroupNorm_Min_BiasAdd",
+      "kernel": "triton_poi_fused_add_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_75_Gemm_GroupNorm_Min_BiasAdd",
+      "kernel": "triton_red_fused_min_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_75_Gemm_GroupNorm_Min_BiasAdd",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_76_Gemm_Add_ReLU",
+      "kernel": "triton_tem_fused_add_mm_relu_threshold_backward_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_77_ConvTranspose3d_Scale_BatchNorm_GlobalAvgPool",
+      "kernel": "triton_red_fused__native_batch_norm_legit_no_training_convolution_mean_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_78_ConvTranspose3d_Max_Max_Sum",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_79_Conv3d_Multiply_InstanceNorm_Clamp_Multiply_Max",
+      "kernel": "triton_per_fused_clamp_max_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_79_Conv3d_Multiply_InstanceNorm_Clamp_Multiply_Max",
+      "kernel": "triton_red_fused__native_batch_norm_legit_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_7_Conv3d_ReLU_LeakyReLU_GELU_Sigmoid_BiasAdd",
+      "kernel": "triton_poi_fused_add_convolution_gelu_leaky_relu_relu_sigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_80_Gemm_Max_Subtract_GELU",
+      "kernel": "triton_red_fused_gelu_gelu_backward_max_mean_sub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_80_Gemm_Max_Subtract_GELU",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_81_Gemm_Swish_Divide_Clamp_Tanh_Clamp",
+      "kernel": "triton_poi_fused_clamp_div_mul_sigmoid_tanh_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_81_Gemm_Swish_Divide_Clamp_Tanh_Clamp",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_82_Conv2d_Tanh_Scaling_BiasAdd_Max",
+      "kernel": "triton_poi_fused_add_convolution_mul_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_82_Conv2d_Tanh_Scaling_BiasAdd_Max",
+      "kernel": "triton_poi_fused_max_pool2d_with_indices_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_83_Conv3d_GroupNorm_Min_Clamp_Dropout",
+      "kernel": "triton_poi_fused_clamp_lift_fresh_minimum_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_83_Conv3d_GroupNorm_Min_Clamp_Dropout",
+      "kernel": "triton_red_fused_convolution_native_group_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_84_Gemm_BatchNorm_Scaling_Softmax",
+      "kernel": "triton_red_fused__native_batch_norm_legit_no_training__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_84_Gemm_BatchNorm_Scaling_Softmax",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_85_Conv2d_GroupNorm_Scale_MaxPool_Clamp",
+      "kernel": "triton_poi_fused_clamp_ge_le_logical_and_max_pool2d_with_indices_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_85_Conv2d_GroupNorm_Scale_MaxPool_Clamp",
+      "kernel": "triton_poi_fused_mul_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_85_Conv2d_GroupNorm_Scale_MaxPool_Clamp",
+      "kernel": "triton_red_fused_convolution_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_85_Conv2d_GroupNorm_Scale_MaxPool_Clamp",
+      "kernel": "triton_tem_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_86_Matmul_Divide_GELU",
+      "kernel": "triton_tem_fused_addmm_div_gelu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_87_Conv2d_Subtract_Subtract_Mish",
+      "kernel": "triton_poi_fused_convolution_mish_sub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_88_Gemm_GroupNorm_Swish_Multiply_Swish",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_88_Gemm_GroupNorm_Swish_Multiply_Swish",
+      "kernel": "triton_poi_fused_mul_native_group_norm_sigmoid_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_88_Gemm_GroupNorm_Swish_Multiply_Swish",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_89_ConvTranspose3d_MaxPool_Softmax_Subtract_Swish_Max",
+      "kernel": "triton_per_fused__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_89_ConvTranspose3d_MaxPool_Softmax_Subtract_Swish_Max",
+      "kernel": "triton_per_fused_max_mul_sigmoid_sub_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_89_ConvTranspose3d_MaxPool_Softmax_Subtract_Swish_Max",
+      "kernel": "triton_poi_fused__softmax_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_89_ConvTranspose3d_MaxPool_Softmax_Subtract_Swish_Max",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_8_Conv3d_Divide_Max_GlobalAvgPool_BiasAdd_Sum",
+      "kernel": "triton_per_fused_add_mean_sum_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_8_Conv3d_Divide_Max_GlobalAvgPool_BiasAdd_Sum",
+      "kernel": "triton_red_fused_mean_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_8_Conv3d_Divide_Max_GlobalAvgPool_BiasAdd_Sum",
+      "kernel": "triton_tem_fused_convolution_div_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_90_Conv3d_LeakyReLU_Sum_Clamp_GELU",
+      "kernel": "triton_poi_fused_add_clamp_convolution_gelu_leaky_relu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_91_ConvTranspose2d_Softmax_BiasAdd_Scaling_Sigmoid",
+      "kernel": "triton_poi_fused__softmax_add_mul_sigmoid_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_91_ConvTranspose2d_Softmax_BiasAdd_Scaling_Sigmoid",
+      "kernel": "triton_poi_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_91_ConvTranspose2d_Softmax_BiasAdd_Scaling_Sigmoid",
+      "kernel": "triton_red_fused__softmax_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_92_Conv2d_GroupNorm_Tanh_HardSwish_ResidualAdd_LogSumExp",
+      "kernel": "triton_per_fused_add_hardswish_logsumexp_3",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_92_Conv2d_GroupNorm_Tanh_HardSwish_ResidualAdd_LogSumExp",
+      "kernel": "triton_poi_fused_native_group_norm_tanh_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_92_Conv2d_GroupNorm_Tanh_HardSwish_ResidualAdd_LogSumExp",
+      "kernel": "triton_red_fused_convolution_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_92_Conv2d_GroupNorm_Tanh_HardSwish_ResidualAdd_LogSumExp",
+      "kernel": "triton_tem_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_93_ConvTranspose2d_Add_Min_GELU_Multiply",
+      "kernel": "triton_poi_fused_add_convolution_gelu_lift_fresh_minimum_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_94_Gemm_BiasAdd_Hardtanh_Mish_GroupNorm",
+      "kernel": "triton_per_fused_native_group_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_94_Gemm_BiasAdd_Hardtanh_Mish_GroupNorm",
+      "kernel": "triton_poi_fused_native_group_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_94_Gemm_BiasAdd_Hardtanh_Mish_GroupNorm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_95_Matmul_Add_Swish_Tanh_GELU_Hardtanh",
+      "kernel": "triton_poi_fused_add_gelu_hardtanh_mul_sigmoid_tanh_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_95_Matmul_Add_Swish_Tanh_GELU_Hardtanh",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_96_ConvTranspose3d_Multiply_Max_GlobalAvgPool_Clamp",
+      "kernel": "triton_poi_fused_convolution_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_96_ConvTranspose3d_Multiply_Max_GlobalAvgPool_Clamp",
+      "kernel": "triton_red_fused_clamp_ge_le_logical_and_mean_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_97_Matmul_BatchNorm_BiasAdd_Divide_Swish",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_add_div_mul_sigmoid_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_97_Matmul_BatchNorm_BiasAdd_Divide_Swish",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_98_Matmul_AvgPool_GELU_Scale_Max",
+      "kernel": "triton_red_fused_avg_pool2d_gelu_max_mul_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_98_Matmul_AvgPool_GELU_Scale_Max",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_99_Matmul_GELU_Softmax",
+      "kernel": "triton_red_fused__softmax_gelu_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_99_Matmul_GELU_Softmax",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_9_Matmul_Subtract_Multiply_ReLU",
+      "kernel": "triton_poi_fused_addmm_mul_relu_sub_threshold_backward_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L2_9_Matmul_Subtract_Multiply_ReLU",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor"
+    }
+  ]
+}

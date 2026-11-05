@@ -1,0 +1,18 @@
+{
+  "description": "V100 low-latency kernels for re-run after widened search space (commit 3355ea0). Includes both kernels that previously improved AND kernels that were flat 1.00x — the latter are worth re-trying because the framework now searches smaller XBLOCK across all kernels. Excludes only fp8_attention (skipped).",
+  "mode": "include",
+  "kernels": [
+    {"operator": "sum", "kernel": "triton_sum_kernel_scalar_result", "source": "handwritten"},
+    {"operator": "sum", "kernel": "triton_per_fused_sum_1", "source": "inductor"},
+    {"operator": "vector_add", "kernel": "triton_add_kernel", "source": "handwritten"},
+    {"operator": "low_mem_dropout", "kernel": "_seeded_triton_dropout", "source": "handwritten"},
+    {"operator": "low_mem_dropout", "kernel": "_triton_dropout", "source": "handwritten"},
+    {"operator": "rope", "kernel": "triton_poi_fused__to_copy_cos_mul_sin_1", "source": "inductor"},
+    {"operator": "layer_norm", "kernel": "_layer_norm_fwd_fused", "source": "handwritten"},
+    {"operator": "layer_norm", "kernel": "_layer_norm_fwd_fused_no_bias", "source": "handwritten"},
+    {"operator": "layer_norm", "kernel": "triton_per_fused_native_layer_norm_0", "source": "inductor"},
+    {"operator": "rms_norm", "kernel": "triton_per_fused__to_copy_add_mean_mul_pow_rsqrt_0", "source": "inductor"},
+    {"operator": "fused_linear_jsd", "kernel": "triton_red_fused__to_copy_add_div_mul_sum_1", "source": "inductor"},
+    {"operator": "kl_div", "kernel": "triton_red_fused_div_mul_sub_sum_xlogy_1", "source": "inductor"}
+  ]
+}

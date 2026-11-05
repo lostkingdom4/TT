@@ -1,0 +1,21 @@
+{
+  "description": "Newly added handwritten kernels for V100 experiment",
+  "mode": "include",
+  "kernels": [
+    {
+      "operator": "addmm",
+      "kernel": "_addmm_fwd",
+      "source": "handwritten"
+    },
+    {
+      "operator": "layer_norm",
+      "kernel": "_layer_norm_fwd_fused",
+      "source": "handwritten"
+    },
+    {
+      "operator": "softmax",
+      "kernel": "softmax_kernel",
+      "source": "handwritten"
+    }
+  ]
+}

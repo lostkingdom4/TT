@@ -1,0 +1,8 @@
+{
+  "description": "Re-run BO on the two paper Table-2 kernels that hit 0/N due to CUDA poisoning. With per-shape cfg_cache + CUDA-cascade recovery in run_all._is_stable, the first attempt finds the poison config(s) and the recovery retry short-circuits them via the cache so trials 1+ run on a healthy CUDA context.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "embedding", "kernel": "triton_poi_fused_embedding_0", "source": "inductor"},
+    {"operator": "layer_norm", "kernel": "_layer_norm_fwd_fused_no_bias", "source": "handwritten"}
+  ]
+}

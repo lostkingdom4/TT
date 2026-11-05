@@ -1,0 +1,412 @@
+{
+  "description": "KernelBench L1 kernels on v100 — 81-kernel subset filtered from v100_kernelbench_include.json",
+  "mode": "include",
+  "threshold_ms": 0.02,
+  "kernels": [
+    {
+      "operator": "kb_L1_100_HingeLoss",
+      "kernel": "triton_red_fused_clamp_mean_mul_rsub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_100_HingeLoss",
+      "kernel": "triton_red_fused_clamp_mean_mul_rsub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_10_3D_tensor_matrix_multiplication",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_11_4D_tensor_matrix_multiplication",
+      "kernel": "triton_tem_fused_bmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_12_Matmul_with_diagonal_matrices_",
+      "kernel": "triton_poi_fused_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_13_Matmul_for_symmetric_matrices",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_14_Matmul_for_upper_triangular_matrices",
+      "kernel": "triton_poi_fused_triu_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_14_Matmul_for_upper_triangular_matrices",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_15_Matmul_for_lower_triangular_matrices",
+      "kernel": "triton_poi_fused_tril_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_15_Matmul_for_lower_triangular_matrices",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_16_Matmul_with_transposed_A",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_17_Matmul_with_transposed_B",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_18_Matmul_with_transposed_both",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_19_ReLU",
+      "kernel": "triton_poi_fused_relu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_1_Square_matrix_multiplication_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_20_LeakyReLU",
+      "kernel": "triton_poi_fused_leaky_relu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_21_Sigmoid",
+      "kernel": "triton_poi_fused_sigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_22_Tanh",
+      "kernel": "triton_poi_fused_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_23_Softmax",
+      "kernel": "triton_red_fused__softmax_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_24_LogSoftmax",
+      "kernel": "triton_red_fused__log_softmax_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_25_Swish",
+      "kernel": "triton_poi_fused_mul_sigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_26_GELU_",
+      "kernel": "triton_poi_fused_gelu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_27_SELU_",
+      "kernel": "triton_poi_fused_elu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_28_HardSigmoid",
+      "kernel": "triton_poi_fused_hardsigmoid_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_29_Softplus",
+      "kernel": "triton_poi_fused_softplus_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_2_Standard_matrix_multiplication_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_30_Softsign",
+      "kernel": "triton_poi_fused_abs_add_div_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_31_ELU",
+      "kernel": "triton_poi_fused_elu_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_32_HardTanh",
+      "kernel": "triton_poi_fused_hardtanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_33_BatchNorm",
+      "kernel": "triton_poi_fused__native_batch_norm_legit_no_training_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_3_Batched_matrix_multiplication",
+      "kernel": "triton_tem_fused_bmm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_40_LayerNorm",
+      "kernel": "triton_per_fused_native_layer_norm_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_40_LayerNorm",
+      "kernel": "triton_poi_fused_native_layer_norm_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_40_LayerNorm",
+      "kernel": "triton_red_fused_native_layer_norm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_42_Max_Pooling_2D",
+      "kernel": "triton_poi_fused_max_pool2d_with_indices_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_44_Average_Pooling_1D",
+      "kernel": "triton_poi_fused_avg_pool2d_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_47_Sum_reduction_over_a_dimension",
+      "kernel": "triton_red_fused_sum_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_48_Mean_reduction_over_a_dimension",
+      "kernel": "triton_red_fused_mean_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_49_Max_reduction_over_a_dimension",
+      "kernel": "triton_red_fused_max_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_4_Matrix_vector_multiplication_",
+      "kernel": "triton_red_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_50_conv_standard_2D__square_input__square_kernel",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_50_conv_standard_2D__square_input__square_kernel",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_50_conv_standard_2D__square_input__square_kernel",
+      "kernel": "triton_poi_fused_convolution_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_51_Argmax_over_a_dimension",
+      "kernel": "triton_red_fused_argmax_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_52_Argmin_over_a_dimension",
+      "kernel": "triton_red_fused_argmin_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_53_Min_reduction_over_a_dimension",
+      "kernel": "triton_red_fused_min_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_54_conv_standard_3D__square_input__square_kernel",
+      "kernel": "triton_tem_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_55_conv_standard_2D__asymmetric_input__square_kernel",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_55_conv_standard_2D__asymmetric_input__square_kernel",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_55_conv_standard_2D__asymmetric_input__square_kernel",
+      "kernel": "triton_poi_fused_convolution_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_56_conv_standard_2D__asymmetric_input__asymmetric_kernel",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_56_conv_standard_2D__asymmetric_input__asymmetric_kernel",
+      "kernel": "triton_poi_fused_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_56_conv_standard_2D__asymmetric_input__asymmetric_kernel",
+      "kernel": "triton_poi_fused_convolution_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_59_conv_standard_3D__asymmetric_input__square_kernel",
+      "kernel": "triton_tem_fused_convolution_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_5_Matrix_scalar_multiplication",
+      "kernel": "triton_poi_fused_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_6_Matmul_with_large_K_dimension_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_7_Matmul_with_small_K_dimension_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_85_conv_depthwise_2D_asymmetric_input_asymmetric_kernel",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_85_conv_depthwise_2D_asymmetric_input_asymmetric_kernel",
+      "kernel": "triton_poi_fused_convolution_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_86_conv_depthwise_separable_2D",
+      "kernel": "triton_poi_fused_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_86_conv_depthwise_separable_2D",
+      "kernel": "triton_poi_fused_convolution_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_86_conv_depthwise_separable_2D",
+      "kernel": "triton_tem_fused_convolution_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_88_MinGPTNewGelu",
+      "kernel": "triton_poi_fused_add_mul_pow_tanh_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_89_cumsum",
+      "kernel": "triton_red_fused_cumsum_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_8_Matmul_with_irregular_shapes_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_90_cumprod",
+      "kernel": "triton_red_fused_cumprod_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_91_cumsum_reverse",
+      "kernel": "triton_poi_fused_flip_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_91_cumsum_reverse",
+      "kernel": "triton_red_fused_cumsum_flip_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_92_cumsum_exclusive",
+      "kernel": "triton_poi_fused_zeros_like_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_92_cumsum_exclusive",
+      "kernel": "triton_red_fused_cumsum_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_93_masked_cumsum",
+      "kernel": "triton_red_fused_cumsum_mul_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_94_MSELoss",
+      "kernel": "triton_red_fused_mean_pow_sub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_94_MSELoss",
+      "kernel": "triton_red_fused_mean_pow_sub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_96_HuberLoss",
+      "kernel": "triton_red_fused_smooth_l1_loss_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_96_HuberLoss",
+      "kernel": "triton_red_fused_smooth_l1_loss_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_98_KLDivLoss",
+      "kernel": "triton_red_fused_div_log_mul_sub_sum_xlogy_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_98_KLDivLoss",
+      "kernel": "triton_red_fused_log_mul_sub_sum_xlogy_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_99_TripletMarginLoss",
+      "kernel": "triton_per_fused_add_clamp_min_mean_norm_sub_2",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_99_TripletMarginLoss",
+      "kernel": "triton_red_fused_add_clamp_min_mean_norm_sub_1",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_99_TripletMarginLoss",
+      "kernel": "triton_red_fused_add_norm_sub_0",
+      "source": "inductor"
+    },
+    {
+      "operator": "kb_L1_9_Tall_skinny_matrix_multiplication_",
+      "kernel": "triton_tem_fused_mm_0",
+      "source": "inductor"
+    }
+  ]
+}

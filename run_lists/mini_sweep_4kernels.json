@@ -1,0 +1,20 @@
+{
+  "kernels": [
+    {
+      "operator": "embedding",
+      "kernel": "triton_poi_fused_embedding_0"
+    },
+    {
+      "operator": "geglu",
+      "kernel": "triton_poi_fused_gelu_mul_0"
+    },
+    {
+      "operator": "int4_gemm",
+      "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0"
+    },
+    {
+      "operator": "jagged_layer_norm",
+      "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_view_2"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Subset of observe_failing — only the 7 mamba2/rope kernels (skip jag_ln). 33 shapes. Used to test the variant-type-miss fix where the gap-closing impact is largest.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_bmm_1", "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_2", "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_mul_0", "source": "inductor"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_0", "source": "inductor"},
+    {"operator": "mamba2_chunk_state", "kernel": "triton_poi_fused_clone_1", "source": "inductor"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_0", "source": "inductor"},
+    {"operator": "rope", "kernel": "triton_poi_fused_add_cat_mul_1", "source": "inductor"}
+  ]
+}

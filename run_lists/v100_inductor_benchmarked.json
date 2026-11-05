@@ -1,0 +1,297 @@
+{
+  "description": "V100 kernels - inductor (benchmarkable) + handwritten",
+  "mode": "include",
+  "threshold_ms": 0.01,
+  "kernels": [
+    {
+      "operator": "geglu",
+      "kernel": "triton_poi_fused_gelu_mul_0",
+      "source": "inductor",
+      "latency_ms": 0.6502
+    },
+    {
+      "operator": "addmm",
+      "kernel": "triton_tem_fused_addmm_0",
+      "source": "inductor",
+      "latency_ms": 0.4956
+    },
+    {
+      "operator": "jagged_layer_norm",
+      "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_mul_pow_sub_sum_0",
+      "source": "inductor",
+      "latency_ms": 0.1382
+    },
+    {
+      "operator": "mamba2_chunk_state",
+      "kernel": "triton_poi_fused_clone_0",
+      "source": "inductor",
+      "latency_ms": 0.1208
+    },
+    {
+      "operator": "kl_div",
+      "kernel": "triton_red_fused_mul_sub_sum_xlogy_0",
+      "source": "inductor",
+      "latency_ms": 0.1147
+    },
+    {
+      "operator": "mamba2_chunk_scan",
+      "kernel": "triton_poi_fused_bmm_1",
+      "source": "inductor",
+      "latency_ms": 0.0983
+    },
+    {
+      "operator": "int4_gemm",
+      "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0",
+      "source": "inductor",
+      "latency_ms": 0.0707
+    },
+    {
+      "operator": "mamba2_chunk_scan",
+      "kernel": "triton_poi_fused_mul_0",
+      "source": "inductor",
+      "latency_ms": 0.0665
+    },
+    {
+      "operator": "rope",
+      "kernel": "triton_poi_fused__to_copy_0",
+      "source": "inductor",
+      "latency_ms": 0.0542
+    },
+    {
+      "operator": "rope",
+      "kernel": "triton_poi_fused_add_cat_mul_0",
+      "source": "inductor",
+      "latency_ms": 0.0492
+    },
+    {
+      "operator": "mamba2_chunk_scan",
+      "kernel": "triton_poi_fused_add_mul_4",
+      "source": "inductor",
+      "latency_ms": 0.0492
+    },
+    {
+      "operator": "embedding",
+      "kernel": "triton_poi_fused_embedding_0",
+      "source": "inductor",
+      "latency_ms": 0.043
+    },
+    {
+      "operator": "jagged_softmax",
+      "kernel": "triton_red_fused__jagged_to_padded_dense_forward__softmax_0",
+      "source": "inductor",
+      "latency_ms": 0.042
+    },
+    {
+      "operator": "cross_entropy",
+      "kernel": "triton_red_fused_nll_loss_forward_1",
+      "source": "inductor",
+      "latency_ms": 0.041
+    },
+    {
+      "operator": "fused_linear_cross_entropy",
+      "kernel": "triton_red_fused_nll_loss_forward_1",
+      "source": "inductor",
+      "latency_ms": 0.041
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_logical_not_nansum_ne_sum_0",
+      "source": "inductor",
+      "latency_ms": 0.041
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_sum_0",
+      "source": "inductor",
+      "latency_ms": 0.0379
+    },
+    {
+      "operator": "rope",
+      "kernel": "triton_poi_fused__to_copy_cos_mul_sin_1",
+      "source": "inductor",
+      "latency_ms": 0.0379
+    },
+    {
+      "operator": "mamba2_chunk_state",
+      "kernel": "triton_poi_fused_clone_1",
+      "source": "inductor",
+      "latency_ms": 0.0358
+    },
+    {
+      "operator": "mamba2_chunk_scan",
+      "kernel": "triton_poi_fused_clone_2",
+      "source": "inductor",
+      "latency_ms": 0.0338
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused_mean_0",
+      "source": "inductor",
+      "latency_ms": 0.0329
+    },
+    {
+      "operator": "jagged_layer_norm",
+      "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_view_2",
+      "source": "inductor",
+      "latency_ms": 0.0276
+    },
+    {
+      "operator": "rope",
+      "kernel": "triton_poi_fused_add_cat_mul_1",
+      "source": "inductor",
+      "latency_ms": 0.0276
+    },
+    {
+      "operator": "fused_linear_jsd",
+      "kernel": "triton_per_fused__to_copy_add_div_mul_sum_1",
+      "source": "inductor",
+      "latency_ms": 0.0266
+    },
+    {
+      "operator": "jagged_layer_norm",
+      "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_1",
+      "source": "inductor",
+      "latency_ms": 0.0256
+    },
+    {
+      "operator": "jagged_softmax",
+      "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward__softmax_1",
+      "source": "inductor",
+      "latency_ms": 0.0256
+    },
+    {
+      "operator": "kl_div",
+      "kernel": "triton_per_fused_div_mul_sub_sum_xlogy_1",
+      "source": "inductor",
+      "latency_ms": 0.0246
+    },
+    {
+      "operator": "mamba2_chunk_scan",
+      "kernel": "triton_poi_fused_clone_3",
+      "source": "inductor",
+      "latency_ms": 0.0246
+    },
+    {
+      "operator": "cross_entropy",
+      "kernel": "triton_per_fused_nll_loss_forward_2",
+      "source": "inductor",
+      "latency_ms": 0.0236
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused_mean_2",
+      "source": "inductor",
+      "latency_ms": 0.0205
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_per_fused_cat_mean_3",
+      "source": "inductor",
+      "latency_ms": 0.0195
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused_mean_4",
+      "source": "inductor",
+      "latency_ms": 0.0195
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_per_fused_cat_mean_5",
+      "source": "inductor",
+      "latency_ms": 0.0195
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_red_fused_mean_6",
+      "source": "inductor",
+      "latency_ms": 0.0195
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_per_fused_cat_mean_7",
+      "source": "inductor",
+      "latency_ms": 0.0195
+    },
+    {
+      "operator": "addmm",
+      "kernel": "_addmm_fwd",
+      "source": "handwritten"
+    },
+    {
+      "operator": "addmm",
+      "kernel": "triton_mm",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_jagged_mean_kernel_simple_fused_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_mean",
+      "kernel": "triton_jagged_mean_kernel_variable_length_loop_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_softmax",
+      "kernel": "triton_jagged_softmax_kernel_simple_fused_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_softmax",
+      "kernel": "triton_jagged_softmax_kernel_variable_length_loop_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_sum",
+      "kernel": "triton_jagged_sum_kernel_simple_fused_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "jagged_sum",
+      "kernel": "triton_jagged_sum_kernel_variable_length_loop_buffer_then_sum",
+      "source": "handwritten"
+    },
+    {
+      "operator": "layer_norm",
+      "kernel": "_layer_norm_fwd_fused",
+      "source": "handwritten"
+    },
+    {
+      "operator": "layer_norm",
+      "kernel": "_layer_norm_fwd_fused_no_bias",
+      "source": "handwritten"
+    },
+    {
+      "operator": "low_mem_dropout",
+      "kernel": "_seeded_triton_dropout",
+      "source": "handwritten"
+    },
+    {
+      "operator": "low_mem_dropout",
+      "kernel": "_triton_dropout",
+      "source": "handwritten"
+    },
+    {
+      "operator": "softmax",
+      "kernel": "softmax_kernel",
+      "source": "handwritten"
+    },
+    {
+      "operator": "sum",
+      "kernel": "triton_sum_kernel_scalar_result",
+      "source": "handwritten"
+    },
+    {
+      "operator": "vector_add",
+      "kernel": "triton_add_kernel",
+      "source": "handwritten"
+    },
+    {
+      "operator": "vector_exp",
+      "kernel": "triton_exp_kernel",
+      "source": "handwritten"
+    }
+  ]
+}

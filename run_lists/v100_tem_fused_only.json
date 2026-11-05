@@ -1,0 +1,7 @@
+{
+  "description": "Single kernel triton_tem_fused_addmm_0 — validate compare_configs fix for source-patched original baseline.",
+  "mode": "include",
+  "kernels": [
+    {"operator": "addmm", "kernel": "triton_tem_fused_addmm_0", "source": "inductor"}
+  ]
+}

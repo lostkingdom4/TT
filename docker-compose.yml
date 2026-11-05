@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  triton-kernel-tuning:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pytorch-intel-gpu-mlir:latest
+    container_name: triton-kernel-tuning
+
+    # GPU support - automatically works on Linux and Windows with Docker Desktop + WSL2
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    # Environment variables
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
+      - TRITON_CACHE_DIR=/workspace/Data/triton_cache
+      - TRITON_PRINT_AUTOTUNING=1
+      - TRITON_CACHE_AUTOTUNING=1
+
+    # Mount current directory for development
+    volumes:
+      - .:/workspace
+      - triton-cache:/workspace/Data/triton_cache
+      - performance-data:/workspace/Data/performance
+      - tuning-results:/workspace/Data/tuning_results
+
+    # Keep container running
+    stdin_open: true
+    tty: true
+
+    # Working directory
+    working_dir: /workspace
+
+    # Override command for interactive shell
+    command: /bin/bash
+
+volumes:
+  triton-cache:
+    driver: local
+  performance-data:
+    driver: local
+  tuning-results:
+    driver: local

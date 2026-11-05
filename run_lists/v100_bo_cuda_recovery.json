@@ -1,0 +1,16 @@
+{
+  "description": "BO retry on kernels with cuda-cascade casualties (per-shape blacklist + recovery flow). Excludes embedding (capture-data mismatch, separate fix) and layer_norm_nb (already recovered via _HANDWRITTEN_SOURCES path fix).",
+  "mode": "include",
+  "kernels": [
+    {"operator": "int4_gemm",         "kernel": "triton_poi_fused___lshift___bitwise_and_bitwise_or_0",                                                          "source": "inductor"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_poi_fused__jagged_to_padded_dense_forward__padded_dense_to_jagged_forward_add_div_mul_sqrt_sub_view_2", "source": "inductor"},
+    {"operator": "jagged_layer_norm", "kernel": "triton_red_fused__jagged_to_padded_dense_forward_div_mul_pow_sub_sum_0",                                       "source": "inductor"},
+    {"operator": "jagged_softmax",    "kernel": "triton_red_fused__jagged_to_padded_dense_forward__softmax_0",                                                  "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_bmm_1",                                                                                       "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_clone_2",                                                                                     "source": "inductor"},
+    {"operator": "mamba2_chunk_scan", "kernel": "triton_poi_fused_mul_0",                                                                                       "source": "inductor"},
+    {"operator": "mamba2_chunk_state","kernel": "triton_poi_fused_clone_0",                                                                                     "source": "inductor"},
+    {"operator": "mamba2_chunk_state","kernel": "triton_poi_fused_clone_1",                                                                                     "source": "inductor"},
+    {"operator": "rope",              "kernel": "triton_poi_fused_add_cat_mul_0",                                                                               "source": "inductor"}
+  ]
+}
